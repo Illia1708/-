@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style2.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="tema">
+            <img class="img" src="img/moon 1.png" alt="Темна тема">
+            <img class="img" src="img/switch 1.png" alt="Перемикання">
+            <img class="img" src="img/bright 1.png" alt="Світла тема">
+        </div>
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search...">
+        </div>
+        <div class="tema1">
+            <img class="img1" src="img/Group 4.png" alt="">
+        </div>
+    </header>
+    <main> 
+        <div class="post-container">
+            <div class="post-buttons">
+                <button class="share-btn">Share your post</button>
+                <button class="create-btn">Create Post</button>
+            </div>
+            <div class="post-header">
+                <span class="post-author">МІСТЕР Х</span>
+            </div>
+            <div class="post-content">
+                <p class="p2">Криптовалюта — це цифрова валюта, яка використовує криптографію для безпеки та працює на основі блокчейну. Вона децентралізована, тобто не контролюється банками чи урядами.
+
+                    Чому популярна?
+                    
+                        •	Децентралізація: Швидші й дешевші транзакції без посередників.
+                        •	Інвестиції: Потенційно високий прибуток (наприклад, зростання біткоїна).
+                        •	Прозорість: Дані у блокчейні відкриті та незмінні.
+                        •	Захист від інфляції: Обмежена емісія більшості криптовалют.
+                    
+                    Використання:
+                    Оплата товарів, інвестиції, онлайн-ігри, благодійність.
+                    
+                    Ризики:
+                    Волатильність, шахрайство, хакерські атаки через відсутність регулювання.
+                    
+                    Майбутнє:
+                    Розвиток технологій блокчейну та впровадження цифрових валют урядами відкривають нові можливості для економіки.
+                    </p>
+                <div class="post-image">
+                    <img src="img/crypto.jpg" alt="Bitcoin">
+                </div>
+            </div>
+            <div class="post-footer">
+                <button class="heart" type="button">
+                    <span class="likes-number">♥️ 28</span>
+                  </button>
+                <button class="action-button1 comment-btn">💬</button>
+                <button class="action-button2">🔗 Share</button>
+            </div>
+        </div>
+    </main>
+    <div class="comment-menu hidden">
+        <h1>Додати коментар</h1>
+        <form class="comment-form">
+            <input
+                type="text"
+                class="comment-field"
+                placeholder="Напишіть ваш коментар..." 
+                name="commentField"
+                required />
+            <button type="submit" class="submit-button">Відправити</button>
+        </form>
+        <ul class="comment-list"></ul>
+    </div>
+    <footer>
+        <p class="p1">© 2024 FORUM, Inc. All rights reserved.</p>
+        <p class="p1">Автор МІСТЕР Х</p>
+    </footer>
+    <aside class="cookies-agreement">
+        <p>Поки ви знаходитесь на нашому сайті та читаєте новини, ми використовуємо ваші кукіс. Дуже сподіваємось, що ви не проти.</p>
+        <button class="button cookies-button" type="button">Окей, продовжуйте</button>
+    </aside>
+    <script src="script3.js"></script>
+    <script src="script2.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+</body>
+</html>
