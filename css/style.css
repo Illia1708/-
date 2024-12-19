@@ -1,0 +1,298 @@
+/* Стилі для бургер-меню */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 66%;
+    color: #fff;
+}
+
+.burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35px;
+    height: 25px;
+    cursor: pointer;
+    margin: 10px 20px;
+}
+h1{
+    margin-left: 20px;
+}
+.toggle-btn:hover {
+    background-color: #5a4cc8; /* Колір при наведенні */
+    transform: translateY(-1px); /* Менший ефект підняття */
+    box-shadow: 0 2px 4px rgba(108, 92, 231, 0.3);
+}
+.toggle-btn {
+    padding: 5px 10px !important; /* Примусове зменшення внутрішніх відступів */
+    font-size: 12px !important; /* Примусове зменшення розміру шрифту */
+}
+.burger div {
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Стилі для випадаючого меню */
+.menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: #8BBBEC;
+    width: 200px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 15px;
+    z-index: 10;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #67A6E5;
+    border-radius: 3px;
+}
+
+/* Активний стан */
+.burger.active div:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.burger.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.active div:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+.menu.active {
+    display: flex;
+    background-color: lightgray;
+}
+
+/* Базові стилі для великих екранів (ноутбуки) */
+header {
+    width: 100%;
+    height: 156px;
+    background-color: #8BBBEC;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    background-color: #D9D9D9;
+}
+
+footer {
+    width: 100%;
+    height: 116px;
+    background-color: #67A6E5;
+    font-size: 29px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 2px 2px 5px black;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    background-color: #9165d4;
+    font-size: 16px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+}
+
+button:hover {
+    background-color: #7a52c0;
+}
+
+.news-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.news-item {
+    width: 61.5%;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+.filter{
+    width: 178px;
+    height: 42px;
+    border-radius: 10px;
+    margin-top: 20px;
+    border: 0;
+    color: white;
+    background-color: #9165d4;
+}
+.news-image {
+    width: 70px;
+    height: 50px;
+    background-color: #cfcfcf;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.news-text .title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.news-text .info {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0 0;
+}
+
+.filter-btn {
+    width: 178px;
+    height: 42px;
+    border-radius: 30px;
+}
+
+.all-news-btn {
+    width: 178px;
+    height: 42px;
+    border-radius: 10px;
+}
+.hidden {
+    display: none;
+}
+a {
+    text-decoration: none; /* Прибрати підкреслення */
+    color: inherit; /* Колір тексту як у батьківського елемента */
+    cursor: pointer; /* Курсор у вигляді руки */
+  }
+  a:hover {
+    color: #8a4ccf; /* Колір тексту при наведенні */
+  }
+/* Адаптив для планшетів (max-width: 1279px, min-width: 768px) */
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+
+    header {
+        height: 120px; /* Зменшена висота */
+    }
+
+    main {
+        height: auto; /* Автоматична висота */
+    }
+
+    footer {
+        height: 100px; /* Зменшена висота */
+        font-size: 24px; /* Зменшений шрифт */
+    }
+
+    .buttons {
+        margin-bottom: 15px;
+    }
+
+    button {
+        font-size: 14px; /* Зменшений шрифт */
+        padding: 8px 15px; /* Зменшений padding */
+    }
+    .news-item {
+        width: 75%; /* Ширина новин зменшена */
+        padding: 12px;
+    }
+
+    .news-image {
+        width: 40px; /* Зменшено розмір іконки */
+        height: 40px;
+    }
+
+    .news-text .title {
+        font-size: 16px; /* Зменшений розмір заголовка */
+    }
+
+    .news-text .info {
+        font-size: 12px; /* Зменшений розмір тексту */
+    }
+
+    .filter-btn, .all-news-btn {
+        width: 150px; /* Зменшені кнопки */
+        height: 36px;
+    }
+}
+
+/* Адаптив для мобільних пристроїв (max-width: 768px) */
+@media screen and (max-width: 768px) {
+
+    header {
+        height: 80px; /* Зменшена висота */
+    }
+
+    main {
+        height: auto;
+    }
+
+    footer {
+        height: 80px;
+        font-size: 18px; /* Зменшений шрифт */
+    }
+
+    .buttons {
+        margin-bottom: 10px;
+    }
+
+    button {
+        font-size: 12px; /* Зменшений шрифт */
+        padding: 6px 12px; /* Зменшене padding */
+    }
+
+    .news-item {
+        width: 70%; /* Збільшуємо ширину */
+        padding: 10px;
+    }
+
+    .news-image {
+        width: 35px; /* Зменшення іконок */
+        height: 35px;
+    }
+
+    .news-text .title {
+        font-size: 14px; /* Зменшений шрифт заголовка */
+    }
+
+    .news-text .info {
+        font-size: 11px; /* Зменшений шрифт для опису */
+    }
+
+    .filter-btn, .all-news-btn {
+        width: 120px; /* Зменшена ширина кнопок */
+        height: 30px;
+    }
+}
